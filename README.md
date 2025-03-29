@@ -1,52 +1,64 @@
-# Web Hangul Việt
+# Ứng dụng chuyển đổi chữ Hangul sang phiên âm tiếng Việt
 
-Ứng dụng web chuyển đổi chữ Hangul (tiếng Hàn) sang phiên âm tiếng Việt.
+Ứng dụng web đơn giản giúp chuyển đổi chữ Hangul (tiếng Hàn Quốc) sang phiên âm tiếng Việt, giúp người Việt Nam dễ dàng đọc và phát âm chính xác các từ tiếng Hàn.
 
 ## Tính năng
 
--   Chuyển đổi từng ký tự Hangul sang phiên âm tiếng Việt
--   Hiển thị kết quả trực quan với ký tự gốc và phiên âm
--   Hỗ trợ tính năng sao chép vào clipboard
--   Tự động điều chỉnh chiều cao vùng nhập liệu
--   Khả năng xem toàn bộ kết quả với định dạng dễ đọc
--   Giao diện thân thiện, đáp ứng trên các thiết bị
-
-## Cách sử dụng
-
-1. Nhập văn bản tiếng Hàn (chữ Hangul) vào vùng nhập liệu
-2. Kết quả chuyển đổi từng ký tự sẽ hiển thị ngay bên dưới
-3. Bấm "Xem tất cả" để hiển thị kết quả đầy đủ với định dạng dễ đọc
-4. Sử dụng nút sao chép để đưa kết quả vào clipboard
+-   Chuyển đổi ký tự Hangul sang phiên âm tiếng Việt
+-   Hiển thị từng ký tự Hangul kèm phiên âm tương ứng
+-   Hỗ trợ sao chép văn bản từ clipboard
+-   Xuất kết quả để dễ dàng sao chép
+-   Giao diện thân thiện, dễ sử dụng
 
 ## Cài đặt
 
-```bash
-# Clone repository
-git clone https://github.com/limpaulfin/web-hangul-viet.git
+1. Clone repository:
 
-# Di chuyển vào thư mục dự án
+```
+git clone https://github.com/yourusername/web-hangul-viet.git
 cd web-hangul-viet
-
-# Chạy ứng dụng (trong thư mục test)
-cd test
-npx serve
 ```
 
-## Công nghệ
+2. Cài đặt các gói phụ thuộc:
 
--   HTML5, CSS3, JavaScript
--   jQuery cho DOM manipulation
--   Sử dụng CSS Grid và Flexbox cho layout
--   Responsive design cho mọi thiết bị
+```
+npm install
+```
 
-## Tác giả
+3. Chạy ứng dụng:
 
--   limpaulfin
+```
+npm start
+```
+
+4. Mở trình duyệt và truy cập: `http://localhost:8080`
+
+## Công nghệ sử dụng
+
+-   HTML, CSS, JavaScript
+-   jQuery
+-   Node.js (cho web server)
+
+## Cấu trúc dự án
+
+```
+web-hangul-viet/
+├── app/                  # Mã nguồn ứng dụng
+│   ├── css/              # Style sheets
+│   ├── js/               # JavaScript files
+│   │   ├── init.js       # Entry point
+│   │   ├── ui-handlers.js # Xử lý giao diện người dùng
+│   │   └── hangul-converter.js # Công cụ chuyển đổi Hangul
+│   └── index.html        # File HTML chính
+├── docs/                 # Tài liệu
+├── server.js             # Node.js server
+└── package.json          # Cấu hình npm
+```
+
+## Đóng góp
+
+Mọi đóng góp đều được hoan nghênh. Vui lòng mở một issue hoặc tạo pull request để thêm tính năng mới hoặc sửa lỗi.
 
 ## Giấy phép
 
-MIT
-
-## Bản quyền
-
-&copy; 2023 Lâm Thanh Phong (Trường Đại Học Ngân Hàng Tp. HCM - HUB). Tất cả các quyền được bảo lưu.
+[MIT](LICENSE)

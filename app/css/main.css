@@ -1,0 +1,16 @@
+/* Main CSS file - import all components */
+
+/* Base styles and variables */
+@import './components/base.css';
+
+/* Input elements and buttons */
+@import './components/inputs.css';
+
+/* Modal styles */
+@import './components/modal.css';
+
+/* Output display */
+@import './components/output.css';
+
+/* Responsive styles */
+@import './components/responsive.css';

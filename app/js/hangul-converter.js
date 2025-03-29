@@ -117,40 +117,24 @@ function convertHangulChar(char) {
     const jung = ((hangulCode - jong) / 28) % 21;
     const cho = Math.floor(((hangulCode - jong) / 28 - jung) / 21);
 
-    console.log(JSON.stringify({
-        char,
-        code,
-        hangulCode,
-        cho,
-        jung,
-        jong,
-        initial: initialConsonants[cho],
-        medial: medialVowels[jung],
-        final: finalConsonantsList[jong]
-    }));
-
     // Chuyển đổi các thành phần sang tiếng Việt
     let result = '';
 
     // Thêm phụ âm đầu (KHÔNG cần kiểm tra cho > 0 vì cho = 0 cũng có phụ âm)
     const consonant = consonants[initialConsonants[cho]];
-    console.log(JSON.stringify({ initial: consonant }));
     result += consonant || '';
 
     // Thêm nguyên âm
     const vowel = vowels[medialVowels[jung]];
-    console.log(JSON.stringify({ medial: vowel }));
     result += vowel || '';
 
     // Thêm phụ âm cuối
     if (jong > 0) {
         const finalComponent = finalConsonantsList[jong];
         const final = finalConsonants[finalComponent];
-        console.log(JSON.stringify({ final }));
         result += final || '';
     }
 
-    console.log(JSON.stringify({ result }));
     return result;
 }
 

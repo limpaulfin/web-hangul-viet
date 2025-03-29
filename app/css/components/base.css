@@ -1,0 +1,70 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+/* Import Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* Reset và base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #005180;
+    --secondary-color: rgb(164, 16, 52);
+    --primary-light: #0277bd;
+    --secondary-light: rgb(190, 35, 74);
+    --text-on-primary: #ffffff;
+    --text-on-secondary: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F7F9FC;
+    color: #212121;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+/* Card styles */
+.card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Title */
+h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Title icons */
+h1 i,
+h2 i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+h1 i {
+    font-size: 24px;
+}
+
+h2 i {
+    font-size: 20px;
+}

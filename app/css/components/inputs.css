@@ -1,0 +1,216 @@
+/* Input container */
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Button container */
+.button-container {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+/* Action buttons (base styles cho các nút chung) */
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--text-on-primary);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+/* Paste button */
+.paste-btn {
+    background-color: var(--primary-color);
+}
+
+.paste-btn:hover {
+    background-color: var(--primary-light);
+}
+
+/* Clear button */
+.clear-btn {
+    background-color: var(--secondary-color);
+}
+
+.clear-btn:hover {
+    background-color: var(--secondary-light);
+}
+
+/* Disabled buttons */
+.action-btn.disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.action-btn.disabled:hover {
+    transform: none;
+}
+
+/* Tooltip for action buttons */
+.action-btn .tooltip {
+    position: absolute;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.action-btn:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Input textarea */
+textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    padding-right: 100px;
+    /* Thêm padding bên phải để không bị các nút che chữ */
+    font-size: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+    /* Không cho người dùng resize, sẽ tự động điều chỉnh */
+    transition: all 0.2s ease;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    /* Ẩn thanh cuộn */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 81, 128, 0.1);
+}
+
+/* Button wrapper */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+/* Show All button */
+.show-all-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px auto 4px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.show-all-btn:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.show-all-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Subtle variant for less important buttons */
+.show-all-btn.subtle {
+    background-color: transparent;
+    color: #757575;
+    border: 1px solid #E0E0E0;
+    box-shadow: none;
+    font-size: 13px;
+    padding: 6px 12px;
+}
+
+.show-all-btn.subtle:hover {
+    background-color: #F5F5F5;
+    color: #616161;
+    border-color: #BDBDBD;
+    transform: none;
+    box-shadow: none;
+}
+
+.show-all-btn.subtle:active {
+    background-color: #EEEEEE;
+}
+
+/* Copy button */
+.copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: var(--secondary-color);
+    color: var(--text-on-secondary);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.copy-btn:hover {
+    background-color: var(--secondary-light);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.copy-btn.copied {
+    background-color: var(--secondary-light);
+}
+
+.copy-btn.copied:after {
+    content: '✓';
+    margin-left: 4px;
+}

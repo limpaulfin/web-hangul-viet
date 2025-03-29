@@ -1,0 +1,92 @@
+/* Responsive styles */
+@media (max-width: 600px) {
+    .char-block {
+        min-width: 40px;
+        max-width: 50px;
+        padding: 4px 3px;
+    }
+
+    .hangul {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .latin {
+        font-size: 12px;
+    }
+
+    body {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .line-break {
+        height: 8px;
+        margin: 3px 0;
+    }
+
+    .button-container {
+        right: 8px;
+        top: 8px;
+        gap: 6px;
+    }
+
+    .action-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    textarea {
+        padding-right: 80px;
+        /* Giảm padding trên màn hình nhỏ */
+    }
+
+    .modal-content {
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+
+    .modal-header h2 {
+        font-size: 16px;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .combined-text {
+        min-height: 150px;
+        max-height: 300px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1 i {
+        font-size: 18px;
+    }
+
+    h2 i {
+        font-size: 16px;
+    }
+
+    .copyright {
+        font-size: 11px;
+        padding: 8px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
