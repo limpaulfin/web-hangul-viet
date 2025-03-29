@@ -4,24 +4,35 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <title>Chuyển đổi tiếng Hàn sang tiếng Việt</title>
+        <title>Chuyển đổi tiếng Hàn sang phiên âm tiếng Việt</title>
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <div class="container">
             <div class="card">
-                <h1>Chuyển đổi chữ Hangul sang tiếng Việt</h1>
+                <h1>
+                    <i class="fas fa-language"></i> Chuyển đổi chữ Hangul sang
+                    phiên âm tiếng Việt
+                </h1>
             </div>
 
             <div class="card">
-                <button id="paste-btn" class="paste-btn">
-                    <i class="fas fa-clipboard"></i
-                    ><span class="tooltip">Paste from clipboard</span>
-                </button>
-                <textarea
-                    id="input"
-                    placeholder="Nhập chữ Hangul tại đây..."
-                ></textarea>
+                <div class="input-container">
+                    <div class="button-container">
+                        <button id="paste-btn" class="action-btn paste-btn">
+                            <i class="fas fa-clipboard"></i>
+                            <span class="tooltip">Paste from clipboard</span>
+                        </button>
+                        <button id="clear-btn" class="action-btn clear-btn">
+                            <i class="fas fa-times"></i>
+                            <span class="tooltip">Xóa văn bản</span>
+                        </button>
+                    </div>
+                    <textarea
+                        id="input"
+                        placeholder="Nhập chữ Hangul tại đây..."
+                    ></textarea>
+                </div>
             </div>
 
             <div class="card">
@@ -33,13 +44,18 @@
                     </button>
                 </div>
             </div>
+
+            <div class="copyright">
+                &copy; 2023 Lâm Thanh Phong (Trường Đại Học Ngân Hàng Tp. HCM -
+                HUB)
+            </div>
         </div>
 
         <!-- Modal hiển thị kết quả đầy đủ -->
         <div id="result-modal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2>Kết quả chuyển đổi</h2>
+                    <h2><i class="fas fa-file-alt"></i> Kết quả chuyển đổi</h2>
                     <button class="close-btn">
                         <i class="fas fa-times"></i>
                     </button>

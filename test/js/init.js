@@ -11,15 +11,8 @@ $(document).ready(function () {
     const $closeBtn = $('.close-btn');
     const $copyResultBtn = $('#copy-result-btn');
     const $combinedText = $('#combined-text');
-
-    // Thêm nút Paste from clipboard
-    const $container = $('.container');
-    const $card = $input.closest('.card');
-    const $pasteBtn = $('<button>').attr('id', 'paste-btn').addClass('paste-btn').html('<i class="fas fa-clipboard"></i>');
-    const $tooltip = $('<span>').addClass('tooltip').text('Paste from clipboard');
-
-    $pasteBtn.append($tooltip);
-    $card.find('textarea').before($pasteBtn);
+    const $pasteBtn = $('#paste-btn');
+    const $clearBtn = $('#clear-btn');
 
     // Kiểm tra xem các phần tử có tồn tại không
     if (!$input.length || !$output.length) {
@@ -168,6 +161,21 @@ $(document).ready(function () {
         }
     }
 
+    // Hàm xử lý Clear input
+    function handleClear() {
+        // Xóa nội dung trong input
+        $input.val('');
+
+        // Xóa kết quả hiển thị
+        $output.empty();
+
+        // Đặt lại chiều cao mặc định cho textarea
+        $input.css('height', '80px');
+
+        // Focus vào textarea
+        $input.focus();
+    }
+
     // Hàm hiển thị modal
     function showModal() {
         // Cập nhật nội dung trước khi hiển thị
@@ -212,6 +220,7 @@ $(document).ready(function () {
     $input.on('input', convertAndDisplay);
     $input.on('keyup input', autoResizeTextarea);
     $pasteBtn.on('click', handlePaste);
+    $clearBtn.on('click', handleClear);
     $showAllBtn.on('click', showModal);
     $closeBtn.on('click', hideModal);
     $copyResultBtn.on('click', copyResultToClipboard);

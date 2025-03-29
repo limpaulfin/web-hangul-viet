@@ -46,3 +46,7 @@ npx serve
 ## Giấy phép
 
 MIT
+
+## Bản quyền
+
+&copy; 2023 Lâm Thanh Phong (Trường Đại Học Ngân Hàng Tp. HCM - HUB). Tất cả các quyền được bảo lưu.
