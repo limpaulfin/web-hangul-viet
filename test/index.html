@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <title>Chuyển đổi tiếng Hàn sang tiếng Việt</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <h1>Chuyển đổi chữ Hangul sang tiếng Việt</h1>
+            </div>
+
+            <div class="card">
+                <button id="paste-btn" class="paste-btn">
+                    <i class="fas fa-clipboard"></i
+                    ><span class="tooltip">Paste from clipboard</span>
+                </button>
+                <textarea
+                    id="input"
+                    placeholder="Nhập chữ Hangul tại đây..."
+                ></textarea>
+            </div>
+
+            <div class="card">
+                <div id="output"></div>
+                <div class="button-wrapper">
+                    <button id="show-all-btn" class="show-all-btn subtle">
+                        <i class="fas fa-eye"></i>
+                        <span>Xem tất cả</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal hiển thị kết quả đầy đủ -->
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Kết quả chuyển đổi</h2>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea
+                        id="combined-text"
+                        class="combined-text"
+                        readonly
+                    ></textarea>
+                    <button id="copy-result-btn" class="copy-btn">
+                        <i class="fas fa-copy"></i>
+                        <span>Sao chép kết quả</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thư viện jQuery -->
+        <script
+            type="module"
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+        ></script>
+        <!-- Thư viện Hangul.js -->
+        <script type="module" src="https://unpkg.com/hangul-js"></script>
+        <!-- Module JavaScript -->
+        <script type="module" src="js/init.js"></script>
+    </body>
+</html>
